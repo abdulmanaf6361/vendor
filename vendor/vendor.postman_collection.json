@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "44d1537d-648d-4b7a-a05a-db0e04ae4226",
+		"name": "vendor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30304030"
+	},
+	"item": [
+		{
+			"name": "get token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "manaf",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manaf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "manaf",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "manaf",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/api-token-auth/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"api-token-auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of vendors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create vendor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "zen",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857454",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "ohskjhf",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get specific vendor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/2/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update specific vendor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdul ka",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857452",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "oh",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "530",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/2/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete specific vendor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/2/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"po_number\": \"1003\",\r\n    \"order_date\": \"2024-05-04T18:24:00Z\",\r\n    \"delivery_date\": \"2024-05-09T18:24:00Z\",\r\n    \"items\": {\r\n        \"1\": \"paste\"\r\n    },\r\n    \"quantity\": 2,\r\n    \"status\": \"pending\",\r\n    \"vendor\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857452",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "oh",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "530",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text"
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text"
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get specific order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857452",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "oh",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "530",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text"
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text"
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/5/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update specific order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"po_number\": \"1003\",\r\n    \"order_date\": \"2024-05-04T18:24:00Z\",\r\n    \"delivery_date\": \"2024-05-09T18:24:00Z\",\r\n    \"items\": {\r\n        \"1\": \"paste\"\r\n    },\r\n    \"quantity\": 2,\r\n    \"status\": \"completed\",\r\n    \"quality_rating\": 5.0,\r\n    \"issue_date\": \"2024-05-07T18:24:00Z\",\r\n    \"vendor\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/5/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete specific order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857452",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "oh",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "530",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text"
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text"
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/3/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "performance of vendor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "abdul",
+							"type": "text"
+						},
+						{
+							"key": "contact_details",
+							"value": "7892857452",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "oh",
+							"type": "text"
+						},
+						{
+							"key": "vendor_code",
+							"value": "530",
+							"type": "text"
+						},
+						{
+							"key": "on_time_delivery_rate",
+							"value": "2.0",
+							"type": "text"
+						},
+						{
+							"key": "quality_rating_avg",
+							"value": "3.0",
+							"type": "text"
+						},
+						{
+							"key": "average_response_time",
+							"value": "5.0",
+							"type": "text"
+						},
+						{
+							"key": "fulfillment_rate",
+							"value": "1.0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/vendors/4/performance/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"vendors",
+						"4",
+						"performance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "acknowledge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BASEURL}}/main/api/purchase_orders/5/acknowledge/",
+					"host": [
+						"{{BASEURL}}"
+					],
+					"path": [
+						"main",
+						"api",
+						"purchase_orders",
+						"5",
+						"acknowledge",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "Token a7307a98ee640a61fc013bafe6a09285a4e4acd1",
+			"type": "string"
+		}
+	]
+}
