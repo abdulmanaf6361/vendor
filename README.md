@@ -82,6 +82,4 @@ Token-based authentication is used to secure the API endpoints. To obtain a toke
 - API endpoints are secured with token-based authentication.
 - PEP 8 style guidelines are followed for Python code.
 - API documentation is provided within this README.
-
-Feel free to customize this README file further based on your project's specific requirements and additional information you want to provide to users.
 ```
